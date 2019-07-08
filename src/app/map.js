@@ -284,7 +284,7 @@ export const addMarkerOnMap = (dream) => {
   const marker = new google.maps.Marker({
     position: dream.coordinates,
     map: map,
-    icon: dream.done ? markerDone : marker
+    icon: dream.done ? "./assets/marker_done.png" : "./assets/marker.png"
   });
 
   marker.addListener('click', () => {
