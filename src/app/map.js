@@ -4,6 +4,9 @@ const resetMapButton = document.querySelector("#reset-map");
 const panoramaElement = document.querySelector("#panorama");
 const backToMapButton = document.querySelector("#back-to-map");
 
+import markerDone from '../assets/marker_done.png'
+import marker from '../assets/marker.png'
+
 
 export const initMap = () => {
   map = new google.maps.Map(document.getElementById('map'), {
@@ -281,7 +284,7 @@ export const addMarkerOnMap = (dream) => {
   const marker = new google.maps.Marker({
     position: dream.coordinates,
     map: map,
-    icon: dream.done ? "./src/assets/marker_done.png" : "./src/assets/marker.png"
+    icon: dream.done ? markerDone : marker
   });
 
   marker.addListener('click', () => {

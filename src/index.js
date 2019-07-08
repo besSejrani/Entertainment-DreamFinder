@@ -1,5 +1,4 @@
 import {
-
     initMap,
 } from './app/map'
 import {
